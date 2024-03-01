@@ -71,11 +71,9 @@ const manifest = {
   "sections": {
     "deco-sites/bianza/sections/Animation/Animation.tsx": $$$$$$0,
     "deco-sites/bianza/sections/Cards/IconCardsCarousel.tsx": $$$$$$1,
-    "deco-sites/bianza/sections/Cards/IconCardsCarouselWithImage.tsx":
-      $$$$$$2,
+    "deco-sites/bianza/sections/Cards/IconCardsCarouselWithImage.tsx": $$$$$$2,
     "deco-sites/bianza/sections/Cards/ImageCardsCarousel.tsx": $$$$$$3,
-    "deco-sites/bianza/sections/Cards/ImageCardsCarouselWithImage.tsx":
-      $$$$$$4,
+    "deco-sites/bianza/sections/Cards/ImageCardsCarouselWithImage.tsx": $$$$$$4,
     "deco-sites/bianza/sections/Category/CategoryBanner.tsx": $$$$$$5,
     "deco-sites/bianza/sections/Category/CategoryGrid.tsx": $$$$$$6,
     "deco-sites/bianza/sections/Category/CategoryList.tsx": $$$$$$7,
@@ -110,8 +108,7 @@ const manifest = {
     "deco-sites/bianza/sections/Miscellaneous/CookieConsent.tsx": $$$$$$36,
     "deco-sites/bianza/sections/Miscellaneous/Slide.tsx": $$$$$$37,
     "deco-sites/bianza/sections/Newsletter/Newsletter.tsx": $$$$$$38,
-    "deco-sites/bianza/sections/Product/ImageGalleryFrontBack.tsx":
-      $$$$$$39,
+    "deco-sites/bianza/sections/Product/ImageGalleryFrontBack.tsx": $$$$$$39,
     "deco-sites/bianza/sections/Product/ImageGallerySlider.tsx": $$$$$$40,
     "deco-sites/bianza/sections/Product/NotFound.tsx": $$$$$$41,
     "deco-sites/bianza/sections/Product/NotFoundChallenge.tsx": $$$$$$42,

@@ -127,16 +127,48 @@ export default function ShoppableBanner(props: Props) {
             </>
           ))}
         </figure>
-        <div class="flex flex-col justify-center gap-6 py-20 px-8 bg-neutral-content">
-          <h2 class={`card-title flex ${title?.layout?.position}`}>
+        <div class="flex flex-col justify-center gap-6 py-20 px-8 bg-white">
+          <h2
+            class={`card-title flex text-[40px] font-lato tracking-[5px] font-[600] ${title?.layout?.position}`}
+          >
             {title?.content}
           </h2>
-          <p class={`text-base-content ${text?.layout?.position}`}>
+          <h2
+            class={`card-title flex text-[40px] font-lato tracking-[5px] font-[600] ${title?.layout?.position}`}
+          >
+            {title?.content}
+          </h2>
+          <h2
+            class={`card-title flex text-[40px] font-lato tracking-[5px] font-[600] ${title?.layout?.position}`}
+          >
+            {title?.content}
+          </h2>
+          {
+            /*<p class={`text-base-content" ${text?.layout?.position}`}>
             {text?.content}
-          </p>
-          <div class={`card-actions ${link?.layout?.position}`}>
+            </p>*/
+          }
+          {
+            /*<div class={`card-actions ${link?.layout?.position}`}>
             <a class="underline" href={link?.href}>{link?.text}</a>
-          </div>
+          </div>*/
+          }
+
+          {/*TEXTO FALANDO SOBRE A NOVA COLEÇÃO DE ROUPAS */}
+
+          <p class="font-lato text-justify text-[13px] font-[300] tracking-[1px] leading-[24px] mb-8 mt-8 ">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+
+          <p class="font-lato text-justify text-[13px] font-[300] tracking-[1px] leading-[24px] mb-8">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
         </div>
       </div>
     </div>

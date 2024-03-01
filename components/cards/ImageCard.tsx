@@ -39,12 +39,12 @@ function CardText({
       }`}
     >
       {tag && (
-        <div class="text-xs bg-primary text-primary-content py-1 px-2 rounded mb-2">
+        <div class="text-xs bg-primary text-primary-content py-1 px-2 rounded mb-2 hidden">
           {tag}
         </div>
       )}
       {label && <h3 class="text-xl">{label}</h3>}
-      {description && <div class="text-sm">{description}</div>}
+      {description && <div class="text-sm hidden">{description}</div>}
     </div>
   );
 }
@@ -80,11 +80,12 @@ function Card(
         {image && (
           <figure>
             <Image
-              class="card"
+              class="card rounded-none"
               src={image}
               alt={description || label || tag}
-              width={160}
-              height={195}
+              width={350}
+              height={390}
+              border-radius={0}
               loading="lazy"
             />
           </figure>
