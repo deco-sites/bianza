@@ -43,7 +43,7 @@ function CardText({
           {tag}
         </div>
       )}
-      {label && <h3 class="text-xl">{label}</h3>}
+      {label && <h3 class="text-xl hidden">{label}</h3>}
       {description && <div class="text-sm hidden">{description}</div>}
     </div>
   );
@@ -90,6 +90,7 @@ function Card(
             />
           </figure>
         )}
+        {label && <h3 class="text-xl">{label}</h3>}
         {position === "Bottom" && (
           <CardText
             tag={tag}
@@ -103,7 +104,7 @@ function Card(
         <a href={href} class={getButtonClasses(style?.button || {})}>
           {buttonText}
         </a>
-      )}
+      )} 
     </div>
   );
 }
