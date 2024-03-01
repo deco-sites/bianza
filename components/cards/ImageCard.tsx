@@ -104,7 +104,7 @@ function Card(
         <a href={href} class={getButtonClasses(style?.button || {})}>
           {buttonText}
         </a>
-      )} 
+      )}
     </div>
   );
 }

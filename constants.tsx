@@ -472,4 +472,3 @@ export function getButtonClasses(style: ButtonType) {
 
   return allButtonClasses;
 }
- 
