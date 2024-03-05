@@ -19,10 +19,10 @@ export default function Section({
   },
   carousel,
 }: Props) {
-  return (
+  return ( 
     <div
       class={clx(
-        "flex flex-col lg:flex-row items-center gap-8",
+        "flex flex-col lg:flex-row items-center gap-8 hidden",
         image.position ? flex.position[image.position] : flex.position["Left"],
       )}
     >

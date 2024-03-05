@@ -38,7 +38,7 @@ function ProductInfo({ page, layout }: Props) {
     throw new Error("Missing Product Details Page Info");
   }
 
-  const { breadcrumbList, product } = page; 
+  const { breadcrumbList, product } = page;
   const {
     productID,
     offers,
