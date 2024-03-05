@@ -19,14 +19,14 @@ export default function Section({
   },
   carousel,
 }: Props) {
-  return ( 
+  return (
     <div
       class={clx(
-        "flex flex-col lg:flex-row items-center gap-8 hidden",
+        "flex flex-col lg:flex-row items-center gap-8",
         image.position ? flex.position[image.position] : flex.position["Left"],
       )}
     >
-      <SimpleImage width={image.width || "30%"} {...image} />
+     <SimpleImage width={image.width || "30%"} {...image} />
       <div class="flex-auto">
         <ImageCardsCarousel {...carousel} />
       </div>

@@ -12,7 +12,7 @@ export interface Props {
 
 export default function SimpleImage({
   altText = "Image",
-  position = "Left",
+  position = "Left",  
   width,
   mobile =
     "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2753/b2278d2d-2270-482b-98d4-f09d5f05ba97",
@@ -31,14 +31,14 @@ export default function SimpleImage({
     <div
       class={clx(
         "flex-none",
-        width ? style.width[width] : style.width["30%"],
+     /*   width ? style.width[width] : style.width["30%"],*/
       )}
     >
       <span
         class={clx(
           "hidden",
           style.width["30%"],
-          style.width["50%"],
+          style.width["50%"], 
           style.width["70%"],
         )}
       >
