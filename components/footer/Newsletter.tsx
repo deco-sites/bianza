@@ -57,7 +57,7 @@ function Newsletter(
           </h4>
         )}
         {content?.description && <div>{content?.description}</div>}
-      </div> 
+      </div>
       <div class="flex flex-col gap-4">
         <form
           class="form-control"
@@ -77,7 +77,7 @@ function Newsletter(
               {content?.form?.buttonText || "Inscrever"}
             </button>
           </div>
-        </form> 
+        </form>
         {content?.form?.helpText && (
           <div
             class="text-[11px] text-black"
