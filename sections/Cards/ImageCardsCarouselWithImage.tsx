@@ -26,7 +26,7 @@ export default function Section({
         image.position ? flex.position[image.position] : flex.position["Left"],
       )}
     >
-     <SimpleImage width={image.width || "30%"} {...image} />
+      <SimpleImage width={image.width || "30%"} {...image} />
       <div class="flex-auto">
         <ImageCardsCarousel {...carousel} />
       </div>

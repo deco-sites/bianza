@@ -112,7 +112,7 @@ export interface Props {
 }
 
 const LAYOUT = {
-  "Primary": "bg-primary text-primary-content",
+  "Primary": "bg-[#f4f4f4] text-primary-content",
   "Secondary": "bg-secondary text-secondary-content",
   "Accent": "bg-accent text-accent-content",
   "Base 100": "bg-base-100 text-base-content",
@@ -238,19 +238,25 @@ function Footer({
                 {_region}
               </div>
             </div>
-            <div class="flex flex-col md:flex-row md:justify-between md:flex-wrap lg:flex-nowrap lg:justify-center gap-8 lg:gap-12 ">
+            <div class="flex flex-col md:flex-row md:justify-between md:flex-wrap lg:flex-nowrap lg:justify-around gap-8 lg:gap-12 ">
               {/*_logo*/}
               {_sectionLinks}
               {_newsletter}
             </div>
-            <Divider />
+            <h1 class=" text-black text-center">BIANZA</h1>
+            <span class="text-black text-center text-xs font-thin">
+              ®copyright 1990-2024 | bianza conceito eireli cnpj:
+              17.695.47./0001-64 rua rio de janeiro, 1.548 - lourdes - belo
+              horizonte, mg - cep 30160-042
+            </span>
+           {/*<Divider />*/}
+
             
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
+            {/*<div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
               <PoweredByDeco />
               {_links}
-            </div>
-          </div>
+            </div>*/}
+        </div>
         )}
         {layout?.variation == "Variation 2" && (
           <div class="flex flex-col gap-10">

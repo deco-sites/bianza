@@ -50,14 +50,14 @@ function Newsletter(
         tiled && "lg:flex-row lg:w-full lg:justify-between",
       )}
     >
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 text-black">
         {content?.title && (
-          <h4 class={tiled ? "text-2xl lg:text-3xl" : "text-lg"}>
+          <h4 class={tiled ? "text-2xl lg:text-3xl" : "text-md text-[#1c1b1f]"}>
             {content?.title}
           </h4>
         )}
         {content?.description && <div>{content?.description}</div>}
-      </div>
+      </div> 
       <div class="flex flex-col gap-4">
         <form
           class="form-control"
@@ -77,10 +77,10 @@ function Newsletter(
               {content?.form?.buttonText || "Inscrever"}
             </button>
           </div>
-        </form>
+        </form> 
         {content?.form?.helpText && (
           <div
-            class="text-[11px]"
+            class="text-[11px] text-black"
             dangerouslySetInnerHTML={{ __html: content?.form?.helpText }}
           />
         )}
