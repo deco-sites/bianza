@@ -17,7 +17,7 @@ export default function Section({
   image = {
     width: "30%",
   },
-  carousel, 
+  carousel,
 }: Props) {
   return (
     <div

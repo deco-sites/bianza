@@ -238,7 +238,7 @@ function Footer({
                 {_region}
               </div>
             </div>
-            <div class="flex flex-col md:flex-row md:justify-between md:flex-wrap lg:flex-nowrap lg:justify-around gap-8 lg:gap-12 ">
+            <div class="flex flex-col md:flex-row md:justify-between md:flex-wrap lg:flex-nowrap lg:justify-center gap-8 lg:gap-12 ">
               {/*_logo*/}
               {_sectionLinks}
               {_newsletter}
