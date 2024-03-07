@@ -283,7 +283,7 @@ function ProductCard({
                 )
                 : (
                   <div
-                    class="truncate text-sm lg:text-sm text-neutral"
+                    class="truncate text-sm lg:text-sm text-neutral hidden"
                     dangerouslySetInnerHTML={{ __html: description ?? "" }}
                   />
                 )}
@@ -296,20 +296,20 @@ function ProductCard({
           : (
             <div class="flex flex-col gap-2">
               <div
-                class={`flex flex-col gap-0 ${
+                class={`flex flex-row gap-4  justify-start ${
                   l?.basics?.oldPriceSize === "Normal"
                     ? "lg:flex-row-reverse lg:gap-2"
                     : ""
-                } ${align === "center" ? "justify-center" : "justify-end"}`}
+                } ${align === "center" ? "justify-center" : "justify-star"}`}
               >
                 <div
                   class={`line-through text-base-300 text-xs font-light ${
                     l?.basics?.oldPriceSize === "Normal" ? "lg:text-sm" : ""
                   }`}
-                >
+              >
                   {formatPrice(listPrice, offers?.priceCurrency)}
                 </div>
-                <div class="text-base-content lg:text-sm font-light">
+                <div class="text-base-content lg:text-sm font-light  mt-[-3px]">
                   {formatPrice(price, offers?.priceCurrency)}
                 </div>
               </div>
