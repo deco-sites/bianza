@@ -78,7 +78,7 @@ function Result({
         </div>
 
         <div class="flex justify-center my-4">
-          <div class="join">
+          <div class="join hidden">
             <a
               aria-label="previous page link"
               rel="prev"
