@@ -40,12 +40,12 @@ export default function Shortcuts({
       link: "/",
     },
     {
-      label: "Hanger",
+      label: "Medidas",
       icon: "Hanger",
       link: "/",
     },
     {
-      label: "Clock",
+      label: "Entrega",
       icon: "Clock",
       link: "/",
     },
