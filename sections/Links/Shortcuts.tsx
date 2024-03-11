@@ -39,6 +39,16 @@ export default function Shortcuts({
       icon: "ArrowsPointingOut",
       link: "/",
     },
+    {
+      label: "Hanger",
+      icon: "Hanger",
+      link: "/",
+    },
+    {
+      label: "Clock",
+      icon: "Clock",
+      link: "/",
+    },
   ],
   onHover = "Show label",
 }: Props) {
