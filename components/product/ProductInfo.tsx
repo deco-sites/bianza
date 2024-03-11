@@ -88,9 +88,10 @@ function ProductInfo({ page, layout }: Props) {
           </span>
         </h1>
       </div>
-      
+
       {/* Prices */}
-      {/* <div class="mt-4">
+      {
+        /* <div class="mt-4">
         <div class="flex flex-row gap-2 items-center">
           {(listPrice ?? 0) > price && (
             <span class="line-through text-base-300 text-xs">
@@ -98,20 +99,20 @@ function ProductInfo({ page, layout }: Props) {
             </span>
           )}
           <span class="font-medium text-xl text-secondary">
-            {formatPrice(price, offers?.priceCurrency)} 
+            {formatPrice(price, offers?.priceCurrency)}
           </span>
         </div>
         <span class="text-sm text-base-300">{installments}</span>
-      </div> */}
+      </div> */
+      }
 
       {/* New block Prices */}
       <div class="mt-4">
         <div class="flex flex-row gap-2 items-center">
-         
           {(salePrice ?? price) < price && (
             <span class="line-through text-base-300 text-xs">
               De: &nbsp;
-             {formatPrice(price, offers?.priceCurrency)} 
+              {formatPrice(price, offers?.priceCurrency)}
             </span>
           )}
           <span class="font-medium text-xl text-secondary">
@@ -119,7 +120,7 @@ function ProductInfo({ page, layout }: Props) {
             {formatPrice(salePrice, offers?.priceCurrency)}
           </span>
         </div>
-         Parcelado em: &nbsp;
+        Parcelado em: &nbsp;
         <span class="text-sm text-base-300">{installments}</span>
       </div>
 
