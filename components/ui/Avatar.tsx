@@ -11,7 +11,7 @@ const colors: Record<string, string> = {
   "cinza-escura": "bg-[#A9A9A9] ring-[#A9A9A9]",
   "laranja": "bg-[#FFA500] ring-[#FFA500]",
   "marrom": "bg-[#964b00] ring-[#964b00]",
-  "preta": "bg-[#000] ring-[#000]",
+  "preta": "bg-[#000000] ring-[#000000]",
   "verde-clara": "bg-[#90EE90] ring-[#90EE90]",
   "vermelha": "bg-[#FF0000] ring-[#FF0000]",
   "amarela": "bg-[#ffff00] ring-[#ffff00]",

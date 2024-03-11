@@ -68,7 +68,7 @@ function ProductInfo({ page, layout }: Props) {
     price,
     listPrice,
   });
- 
+
   return (
     <div class="flex flex-col" id={id}>
       <Breadcrumb itemListElement={breadcrumb.itemListElement} />
