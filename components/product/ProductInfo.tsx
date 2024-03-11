@@ -120,7 +120,7 @@ function ProductInfo({ page, layout }: Props) {
             {formatPrice(salePrice, offers?.priceCurrency)}
           </span>
         </div>
-        Parcelado em: &nbsp;
+        ou: &nbsp;
         <span class="text-sm text-base-300">{installments}</span>
       </div>
 
