@@ -45,7 +45,7 @@ export default function Shortcuts({
   return (
     <div class="group fixed flex flex-col top-auto right-130px z-20">
       {shortcuts?.map((shortcut) => {
-        return ( 
+        return (
           <a
             href={shortcut.link}
             target="_blank"
