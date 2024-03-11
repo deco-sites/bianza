@@ -52,9 +52,17 @@ const installmentToString = (
 
 export const useOffer = (aggregateOffer?: AggregateOffer) => {
   const offer = aggregateOffer?.offers[0];
+  
   const listPrice = offer?.priceSpecification.find((spec) =>
     spec.priceType === "https://schema.org/ListPrice"
   );
+
+
+  const salePrice = offer?.priceSpecification.find((spec) =>
+    spec.priceType === "https://schema.org/SalePrice"
+  );
+
+
   const installment = offer?.priceSpecification.reduce(bestInstallment, null);
   const seller = offer?.seller;
   const price = offer?.price;
@@ -63,6 +71,7 @@ export const useOffer = (aggregateOffer?: AggregateOffer) => {
   return {
     price,
     listPrice: listPrice?.price,
+    salePrice: salePrice?.price,
     availability,
     seller,
     installments: installment && price

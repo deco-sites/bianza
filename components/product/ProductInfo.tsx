@@ -54,6 +54,7 @@ function ProductInfo({ page, layout }: Props) {
     seller = "1",
     installments,
     availability,
+    salePrice,
   } = useOffer(offers);
   const productGroupID = isVariantOf?.productGroupID ?? "";
   const breadcrumb = {
@@ -87,8 +88,9 @@ function ProductInfo({ page, layout }: Props) {
           </span>
         </h1>
       </div>
+      
       {/* Prices */}
-      <div class="mt-4">
+      {/* <div class="mt-4">
         <div class="flex flex-row gap-2 items-center">
           {(listPrice ?? 0) > price && (
             <span class="line-through text-base-300 text-xs">
@@ -96,11 +98,31 @@ function ProductInfo({ page, layout }: Props) {
             </span>
           )}
           <span class="font-medium text-xl text-secondary">
-            {formatPrice(price, offers?.priceCurrency)}
+            {formatPrice(price, offers?.priceCurrency)} 
           </span>
         </div>
         <span class="text-sm text-base-300">{installments}</span>
+      </div> */}
+
+      {/* New block Prices */}
+      <div class="mt-4">
+        <div class="flex flex-row gap-2 items-center">
+         
+          {(salePrice ?? price) < price && (
+            <span class="line-through text-base-300 text-xs">
+              De: &nbsp;
+             {formatPrice(price, offers?.priceCurrency)} 
+            </span>
+          )}
+          <span class="font-medium text-xl text-secondary">
+            Por: &nbsp;
+            {formatPrice(salePrice, offers?.priceCurrency)}
+          </span>
+        </div>
+         Parcelado em: &nbsp;
+        <span class="text-sm text-base-300">{installments}</span>
       </div>
+
       {/* Sku Selector */}
       <div class="mt-4 sm:mt-6">
         <ProductSelector product={product} />
