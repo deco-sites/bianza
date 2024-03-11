@@ -106,7 +106,7 @@ function ProductInfo({ page, layout }: Props) {
       </div> */
       }
 
-      {/* New block Prices */}
+      {/* New block Prices */} 
       <div class="mt-4">
         <div class="flex flex-row gap-2 items-center">
           {(salePrice ?? price) < price && (
