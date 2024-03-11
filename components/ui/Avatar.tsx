@@ -6,20 +6,20 @@
 const colors: Record<string, string> = {
   "azul-clara": "bg-[#87CEFA] ring-[#87CEFA]",
   "azul-marinho": "bg-[#000080] ring-[#000080]",
-  "branca": "bg-[#fff] ring-[#fff]",
+  "branca": "bg-[#fffff] ring-[#00000]",
   "cinza": "bg-[#808080] ring-[#808080]",
   "cinza-escura": "bg-[#A9A9A9] ring-[#A9A9A9]",
   "laranja": "bg-[#FFA500] ring-[#FFA500]",
   "marrom": "bg-[#964b00] ring-[#964b00]",
-  "preta": "bg-[#000] ring-[#000]",
+  "preta": "bg-[#000000] ring-[#000000]",
   "verde-clara": "bg-[#90EE90] ring-[#90EE90]",
   "vermelha": "bg-[#FF0000] ring-[#FF0000]",
   "amarela": "bg-[#ffff00] ring-[#ffff00]",
 
   // Color variants - only applied when no color as content is passed
   "active": "text-base-content ring-1 ring-black rounded-full",
-  "disabled": "line-through text-neutral-content",
-  "default": "text-base-content bg-base-100",
+  "disabled": "line-through text-neutral-content rounded-full",
+  "default": "text-base-content bg-base-100 rounded-full",
 };
 
 interface Props {
@@ -29,8 +29,8 @@ interface Props {
 
 const variants = {
   active: "text-base-content ring-1 ring-black rounded-full",
-  disabled: "line-through text-neutral-content",
-  default: "text-base-content bg-base-100",
+  disabled: "line-through text-neutral-content rounded-full",
+  default: "text-base-content bg-base-100 rounded-full",
 };
 
 function Avatar({ content, variant = "default" }: Props) {
