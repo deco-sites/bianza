@@ -6,7 +6,7 @@
 const colors: Record<string, string> = {
   "azul-clara": "bg-[#87CEFA] ring-[#87CEFA]",
   "azul-marinho": "bg-[#000080] ring-[#000080]",
-  "branca": "bg-[#fff] ring-[#fff]",
+  "branca": "bg-[#fffff] ring-[#00000]",
   "cinza": "bg-[#808080] ring-[#808080]",
   "cinza-escura": "bg-[#A9A9A9] ring-[#A9A9A9]",
   "laranja": "bg-[#FFA500] ring-[#FFA500]",
@@ -18,8 +18,8 @@ const colors: Record<string, string> = {
 
   // Color variants - only applied when no color as content is passed
   "active": "text-base-content ring-1 ring-black rounded-full",
-  "disabled": "line-through text-neutral-content",
-  "default": "text-base-content bg-base-100",
+  "disabled": "line-through text-neutral-content rounded-full",
+  "default": "text-base-content bg-base-100 rounded-full",
 };
 
 interface Props {
@@ -29,8 +29,8 @@ interface Props {
 
 const variants = {
   active: "text-base-content ring-1 ring-black rounded-full",
-  disabled: "line-through text-neutral-content",
-  default: "text-base-content bg-base-100",
+  disabled: "line-through text-neutral-content rounded-full",
+  default: "text-base-content bg-base-100 rounded-full",
 };
 
 function Avatar({ content, variant = "default" }: Props) {

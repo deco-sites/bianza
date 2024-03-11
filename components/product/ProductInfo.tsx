@@ -74,9 +74,6 @@ function ProductInfo({ page, layout }: Props) {
       <Breadcrumb itemListElement={breadcrumb.itemListElement} />
       {/* Code and name */}
       <div class="mt-4 sm:mt-8">
-        <div>
-          {gtin && <span class="text-sm text-base-300">Cod. {gtin}</span>}
-        </div>
         <h1>
           <span class="font-medium text-xl capitalize">
             {layout?.name === "concat"
@@ -86,6 +83,9 @@ function ProductInfo({ page, layout }: Props) {
               : name}
           </span>
         </h1>
+        <div>
+          {gtin && <span class="text-sm text-base-300">SKU: {gtin}</span>}
+        </div>
       </div>
       {/* Prices */}
       <div class="mt-4">
