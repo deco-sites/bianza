@@ -301,16 +301,16 @@ function ProductCard({
                     : ""
                 } ${align === "center" ? "justify-center" : "justify-star"}`}
               >
-                {price !== undefined && salePrice !== undefined && price > salePrice && (
-              <div
-                  class={`line-through text-base-300 text-xs font-light ${
-                  l?.basics?.oldPriceSize === "Normal" ? "lg:text-sm" : ""
-                  }`}
-              >
-                {formatPrice(price, offers?.priceCurrency)}
-              </div>
+                {price !== undefined && salePrice !== undefined &&
+                  price > salePrice && (
+                  <div
+                    class={`line-through text-base-300 text-xs font-light ${
+                      l?.basics?.oldPriceSize === "Normal" ? "lg:text-sm" : ""
+                    }`}
+                  >
+                    {formatPrice(price, offers?.priceCurrency)}
+                  </div>
                 )}
-
 
                 <div class="text-base-content lg:text-sm font-light mt-[-3px]">
                   {formatPrice(salePrice, offers?.priceCurrency)}
