@@ -11,18 +11,19 @@ import Newsletter from "$store/islands/Newsletter.tsx";
 import { clx } from "$store/sdk/clx.ts";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
+import { AvailableIcons } from "$store/components/ui/Icon.tsx";
 
 export type Item = {
   label: string;
   href: string;
+  icon: AvailableIcons;
+  aligment?: "Left" | "Right" | "Center";
 };
 
 export type Section = {
   label: string;
   items: Item[];
-  iconFooter?: "AvailableIcons";
-  aligment?: "Left" | "Right" | "Center";
-};
+  };
 
 export interface SocialItem {
   label:
@@ -96,6 +97,9 @@ export interface Props {
     form?: NewsletterForm;
   };
   sections?: Section[];
+  
+  items?: AvailableIcons;
+
   social?: {
     title?: string;
     items: SocialItem[];
@@ -131,41 +135,38 @@ function Footer({
   sections = [{
     "label": "Sobre",
     "items": [
+      { "icon": "WhatsApp", 
+        "href": "/quem-somos", 
+        "label": "Quem somos" 
+    },
       {
-        "href": "/quem-somos",
-        "label": "Quem somos",
-      },
-      {
+        "icon": "Phone",
         "href": "/termos-de-uso",
         "label": "Termos de uso",
       },
       {
+        "icon": "Envelope",
         "href": "/trabalhe-conosco",
         "label": "Trabalhe conosco",
-      },
-      {
-        "href": "/",
-        "label": "Ícone",
       },
     ],
   }, {
     "label": "Atendimento",
     "items": [
       {
+        "icon": "WhatsApp",
         "href": "/centraldeatendimento",
         "label": "Central de atendimento",
       },
       {
+        "icon":"Phone",
         "href": "/whatsapp",
         "label": "Fale conosco pelo WhatsApp",
       },
       {
+        "icon": "Envelope",
         "href": "/trocaedevolucao",
         "label": "Troca e devolução",
-      },
-      {
-        "href": "/",
-        "label": "Ícone",
       },
     ],
   }],
