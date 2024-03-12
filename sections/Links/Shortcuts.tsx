@@ -45,7 +45,7 @@ export default function Shortcuts({
       link: "/",
     },
     {
-      label: "Entrega", 
+      label: "Entrega",
       icon: "Clock",
       link: "/",
     },
