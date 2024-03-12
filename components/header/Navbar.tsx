@@ -95,10 +95,10 @@ function Navbar(
           </a>
         )}
       </div>
-      <div class="flex-none flex items-center justify-end gap-6 col-span-1">
+      <div class="flex-none flex items-center justify-end gap-3 col-span-1">
         {!buttons?.hideSearchButton && (
           <div class="flex items-center text-xs font-thin gap-1">
-            <SearchButton />SEARCH
+            <SearchButton />
           </div>
         )}
 
@@ -106,13 +106,13 @@ function Navbar(
         {!buttons?.hideAccountButton && (
           <a
             class="flex items-center text-xs font-thin"
-            href="/account"
-            aria-label="Account"
+            href="/entrar"
+            aria-label="Minha Conta"
           >
             <div class="flex btn btn-circle btn-sm btn-ghost gap-1">
               <Icon id="User" size={20} strokeWidth={0.4} />
             </div>
-            ACCOUNT
+            
           </a>
         )}
         {!buttons?.hideWishlistButton && (
@@ -127,7 +127,7 @@ function Navbar(
             >
               <Icon id="Heart" size={24} strokeWidth={0.4} />
             </button>
-            WISHLIST
+           
           </a>
         )}
         {!buttons?.hideCartButton && (
