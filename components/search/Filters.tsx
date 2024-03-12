@@ -27,8 +27,8 @@ function ValueItem(
   );
 }
 
-function FilterValues({ key, values }: FilterToggle) {
-  const flexDirection = key === "tamanho" || key === "cor"
+function FilterValues({ label, values }: FilterToggle) {
+  const flexDirection = label === "tamanho" || label === "cor"
     ? "flex-row"
     : "flex-col";
 
@@ -36,8 +36,7 @@ function FilterValues({ key, values }: FilterToggle) {
     <ul class={`flex flex-wrap gap-2 ${flexDirection}`}>
       {values.map((item) => {
         const { url, selected, value, quantity } = item;
-
-        if (key === "cor" || key === "tamanho") {
+        if (label === "cor" || label === "tamanho") {
           return (
             <a href={url} rel="nofollow">
               <Avatar
@@ -48,7 +47,7 @@ function FilterValues({ key, values }: FilterToggle) {
           );
         }
 
-        if (key === "price") {
+        if (label === "price") {
           const range = parseRange(item.value);
 
           return range && (
