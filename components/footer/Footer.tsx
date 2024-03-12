@@ -23,7 +23,7 @@ export type Item = {
 export type Section = {
   label: string;
   items: Item[];
-  };
+};
 
 export interface SocialItem {
   label:
@@ -97,7 +97,7 @@ export interface Props {
     form?: NewsletterForm;
   };
   sections?: Section[];
-  
+
   items?: AvailableIcons;
 
   social?: {
@@ -135,10 +135,7 @@ function Footer({
   sections = [{
     "label": "Sobre",
     "items": [
-      { "icon": "WhatsApp", 
-        "href": "/quem-somos", 
-        "label": "Quem somos" 
-    },
+      { "icon": "WhatsApp", "href": "/quem-somos", "label": "Quem somos" },
       {
         "icon": "Phone",
         "href": "/termos-de-uso",
@@ -159,7 +156,7 @@ function Footer({
         "label": "Central de atendimento",
       },
       {
-        "icon":"Phone",
+        "icon": "Phone",
         "href": "/whatsapp",
         "label": "Fale conosco pelo WhatsApp",
       },
