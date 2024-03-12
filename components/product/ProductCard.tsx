@@ -73,7 +73,7 @@ function ProductCard({
   const productGroupID = isVariantOf?.productGroupID;
   const description = product.description || isVariantOf?.description;
   const [front, back] = images ?? [];
-  const { listPrice, price, installments } = useOffer(offers);
+  const { listPrice, price, installments, salePrice } = useOffer(offers);
   const possibilities = useVariantPossibilities(hasVariant, product);
   const variants = Object.entries(Object.values(possibilities)[0] ?? {});
 
@@ -175,12 +175,11 @@ function ProductCard({
             )}
           </div>
           {/* Discount % */}
-          {!l?.hide?.discount && (
+          {!l?.hide?.discount && salePrice && listPrice &&
+            salePrice < listPrice && (
             <div class="text-sm bg-base-100 p-[10px]">
               <span class="text-base-content font-bold">
-                {listPrice && price
-                  ? `${Math.round(((listPrice - price) / listPrice) * 100)}% `
-                  : ""}
+                {`${Math.round((salePrice / listPrice) * 100)}% `}
               </span>
               OFF
             </div>
@@ -302,15 +301,19 @@ function ProductCard({
                     : ""
                 } ${align === "center" ? "justify-center" : "justify-star"}`}
               >
-                <div
+                {price !== undefined && salePrice !== undefined && price > salePrice && (
+              <div
                   class={`line-through text-base-300 text-xs font-light ${
-                    l?.basics?.oldPriceSize === "Normal" ? "lg:text-sm" : ""
+                  l?.basics?.oldPriceSize === "Normal" ? "lg:text-sm" : ""
                   }`}
-                >
-                  {formatPrice(listPrice, offers?.priceCurrency)}
-                </div>
-                <div class="text-base-content lg:text-sm font-light  mt-[-3px]">
-                  {formatPrice(price, offers?.priceCurrency)}
+              >
+                {formatPrice(price, offers?.priceCurrency)}
+              </div>
+                )}
+
+
+                <div class="text-base-content lg:text-sm font-light mt-[-3px]">
+                  {formatPrice(salePrice, offers?.priceCurrency)}
                 </div>
               </div>
             </div>
