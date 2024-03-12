@@ -39,17 +39,27 @@ export default function Shortcuts({
       icon: "ArrowsPointingOut",
       link: "/",
     },
+    {
+      label: "Medidas",
+      icon: "Hanger",
+      link: "/",
+    },
+    {
+      label: "Entrega", 
+      icon: "Clock",
+      link: "/",
+    },
   ],
   onHover = "Show label",
 }: Props) {
   return (
-    <div class="group fixed flex flex-col top-auto right-130px z-20">
+    <div class="group fixed flex flex-col top-1/2 right-0 z-20">
       {shortcuts?.map((shortcut) => {
         return (
           <a
             href={shortcut.link}
             target="_blank"
-            class={`flex items-center h-10 bg-base-100 text-base-content hover:bg-base-content hover:text-base-100 border-2 border-neutral mt-[-2px] ${
+            class={`flex items-center h-10 bg-base-100 text-base-content border-solid border-2 border-black hover:bg-base-content hover:text-base-100  mt-[-2px] ${
               onHover === "Show tooltip" && "tooltip tooltip-left"
             }`}
             data-tip={shortcut.label}
