@@ -112,7 +112,6 @@ function Navbar(
             <div class="flex btn btn-circle btn-sm btn-ghost gap-1">
               <Icon id="User" size={20} strokeWidth={0.4} />
             </div>
-            
           </a>
         )}
         {!buttons?.hideWishlistButton && (
@@ -127,7 +126,6 @@ function Navbar(
             >
               <Icon id="Heart" size={24} strokeWidth={0.4} />
             </button>
-           
           </a>
         )}
         {!buttons?.hideCartButton && (
