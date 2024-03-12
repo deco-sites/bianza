@@ -216,7 +216,7 @@ function ProductInfo({ page, layout }: Props) {
                 dangerouslySetInnerHTML={{ __html: description }}
               />
             </details>
-          )}
+          )} 
         </span>
       </div>
       {/* Analytics Event */}
