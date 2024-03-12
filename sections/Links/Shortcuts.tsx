@@ -72,7 +72,7 @@ export default function Shortcuts({
                 {shortcut.label}
               </div>
             )}
-          </a>
+          </a> 
         );
       })}
     </div>

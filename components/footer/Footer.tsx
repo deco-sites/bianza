@@ -20,6 +20,8 @@ export type Item = {
 export type Section = {
   label: string;
   items: Item[];
+  iconFooter?: "AvailableIcons";
+  aligment?: "Left" | "Right" | "Center";
 };
 
 export interface SocialItem {
@@ -141,6 +143,10 @@ function Footer({
         "href": "/trabalhe-conosco",
         "label": "Trabalhe conosco",
       },
+      {
+        "href": "/",
+        "label": "Ícone",
+      },
     ],
   }, {
     "label": "Atendimento",
@@ -156,6 +162,10 @@ function Footer({
       {
         "href": "/trocaedevolucao",
         "label": "Troca e devolução",
+      },
+      {
+        "href": "/",
+        "label": "Ícone",
       },
     ],
   }],
