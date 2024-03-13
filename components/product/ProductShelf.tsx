@@ -59,6 +59,7 @@ function ProductShelf({
   };
   return (
     <div class="w-full container py-8 flex flex-col gap-6 lg:py-10">
+      <h1>PRODUTOS SEMELHANTES</h1>
       <Header
         title={title || ""}
         description={description || ""}
