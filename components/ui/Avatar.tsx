@@ -41,7 +41,7 @@ function Avatar({ content, variant = "default" }: Props) {
       <div
         class={`${
           colors[content] ?? colors[variant]
-        } border-[1px] border-black`}
+        } border-[1px] border-black rounded-full`}
       >
         <span class="uppercase ">
           {colors[content] ? "" : content.substring(0, 2)}
