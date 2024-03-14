@@ -17,6 +17,7 @@ import { usePlatform } from "$store/sdk/usePlatform.tsx";
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import ProductSelector from "./ProductVariantSelector.tsx";
+import Shortcuts from "deco-sites/bianza/sections/Links/Shortcuts.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
@@ -207,18 +208,26 @@ function ProductInfo({ page, layout }: Props) {
       </div>
       {/* Description card */}
       <div class="mt-4 sm:mt-6">
+      
         <span class="text-sm">
+       
           {description && (
-            <details>
+            <details open>
               <summary class="cursor-pointer">Descrição</summary>
               <div
                 class="ml-2 mt-2"
                 dangerouslySetInnerHTML={{ __html: description }}
-              />
+             />
             </details>
-          )}
-        </span>
-      </div>
+           
+          )} 
+         </span>
+       </div>
+
+       <Shortcuts
+       />
+          
+
       {/* Analytics Event */}
       <SendEventOnView
         id={id}

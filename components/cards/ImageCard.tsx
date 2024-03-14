@@ -90,7 +90,7 @@ function Card(
             />
           </figure>
         )}
-        {label && <h3 class="text-xl">{label}</h3>}
+        {label && <h3 class="text-md">{label}</h3>}
         {position === "Bottom" && (
           <CardText
             tag={tag}

@@ -53,7 +53,7 @@ export default function Shortcuts({
   onHover = "Show label",
 }: Props) {
   return (
-    <div class="group fixed flex flex-col top-1/2 right-0 z-20">
+    <div class="group relative flex flex-row top-1/2 right-0 z-20">
       {shortcuts?.map((shortcut) => {
         return (
           <a
