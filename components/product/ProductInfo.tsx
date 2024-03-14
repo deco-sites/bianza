@@ -213,7 +213,7 @@ function ProductInfo({ page, layout }: Props) {
             <details open>
               <summary class="cursor-pointer">Descrição</summary>
               <div
-                class="ml-2 mt-2"
+                class="ml-2 mt-2 mb-5"
                 dangerouslySetInnerHTML={{ __html: description }}
               />
             </details>

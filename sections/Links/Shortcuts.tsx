@@ -6,7 +6,7 @@ export interface Shortcut {
   icon?: AvailableIcons;
   link?: string;
 }
- 
+
 export interface Props {
   shortcuts?: Array<Shortcut>;
   onHover?: "Show label" | "Show tooltip";
@@ -53,13 +53,13 @@ export default function Shortcuts({
   onHover = "Show label",
 }: Props) {
   return (
-    <div class="group relative flex flex-row translate-x-full float-right top-1/2 right-0 z-20">
+    <div class="group relative flex flex-row translate-x-full float-right top-1/2 right-0 z-20 justify-center mt-9">
       {shortcuts?.map((shortcut) => {
         return (
           <a
             href={shortcut.link}
             target="_blank"
-            class={`flex items-center h-10 bg-base-100 text-base-content border-solid border-2 border-black hover:bg-base-content hover:text-base-100  mt-[-2px] ${
+            class={`flex items-center h-10 bg-base-100 text-base-content border-solid border-2 border-black hover:bg-base-content hover:text-base-100  mt-[-2px] w-[200px] ${
               onHover === "Show tooltip" && "tooltip tooltip-left"
             }`}
             data-tip={shortcut.label}
@@ -68,7 +68,7 @@ export default function Shortcuts({
               {shortcut.icon && <Icon id={shortcut.icon} size={24} />}
             </div>
             {(!onHover || onHover === "Show label") && (
-              <div class="flex-none max-w-0 lg:group-hover:max-w-[200px] lg:group-hover:w-auto lg:group-hover:pr-2 duration-200">
+              <div class="flex-none lg:group max-w-[200px] lg:group w-auto lg:group pr-2 duration-200">
                 {shortcut.label}
               </div>
             )}
@@ -77,4 +77,4 @@ export default function Shortcuts({
       })}
     </div>
   );
-}
+} 
