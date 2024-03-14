@@ -221,8 +221,6 @@ function ProductInfo({ page, layout }: Props) {
         </span>
       </div>
 
-      
-
       {/* Analytics Event */}
       <SendEventOnView
         id={id}

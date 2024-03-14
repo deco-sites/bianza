@@ -6,11 +6,10 @@ export interface Shortcut {
   icon?: AvailableIcons;
   link?: string;
 }
-
+ 
 export interface Props {
   shortcuts?: Array<Shortcut>;
   onHover?: "Show label" | "Show tooltip";
- 
 }
 
 export default function Shortcuts({
@@ -55,8 +54,7 @@ export default function Shortcuts({
 }: Props) {
   return (
     <div class="group relative flex flex-row translate-x-full float-right top-1/2 right-0 z-20">
-    
-      {shortcuts?.map((shortcut) => { 
+      {shortcuts?.map((shortcut) => {
         return (
           <a
             href={shortcut.link}
@@ -77,7 +75,6 @@ export default function Shortcuts({
           </a>
         );
       })}
-      
     </div>
   );
 }
