@@ -208,25 +208,20 @@ function ProductInfo({ page, layout }: Props) {
       </div>
       {/* Description card */}
       <div class="mt-4 sm:mt-6">
-      
         <span class="text-sm">
-       
           {description && (
             <details open>
               <summary class="cursor-pointer">Descrição</summary>
               <div
                 class="ml-2 mt-2"
                 dangerouslySetInnerHTML={{ __html: description }}
-             />
+              />
             </details>
-           
-          )} 
-         </span>
-       </div>
+          )}
+        </span>
+      </div>
 
-       <Shortcuts
-       />
-          
+      <Shortcuts />
 
       {/* Analytics Event */}
       <SendEventOnView

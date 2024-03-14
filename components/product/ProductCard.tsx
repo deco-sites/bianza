@@ -228,12 +228,12 @@ function ProductCard({
               ? "transition-opacity opacity-0 lg:group-hover:opacity-100"
               : "lg:hidden"
           }`}
-        > 
+        >
           {/* SKU Selector */}
           {l?.onMouseOver?.showSkuSelector && (
             <ul class="flex justify-center items-center gap-2 w-full ">
               {skuSelector}
-            </ul> 
+            </ul>
           )}
           {l?.onMouseOver?.showCta && cta}
         </figcaption>
