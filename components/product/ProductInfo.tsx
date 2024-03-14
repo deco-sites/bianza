@@ -221,7 +221,7 @@ function ProductInfo({ page, layout }: Props) {
         </span>
       </div>
 
-      <Shortcuts />
+      
 
       {/* Analytics Event */}
       <SendEventOnView
