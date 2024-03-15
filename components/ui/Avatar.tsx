@@ -35,7 +35,8 @@ const variants = {
   default: "text-base-content bg-base-100 rounded-full",
 };
 
-function Avatar({ content, variant = "default" }: Props) {
+function Avatar({ content: _content, variant = "default" }: Props) {
+  const content = _content.toLowerCase();
   return (
     <div class="avatar placeholder text-sm font-light h-6">
       <div
