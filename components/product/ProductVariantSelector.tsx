@@ -7,6 +7,8 @@ interface Props {
   product: Product;
 }
 
+const SHOW_FIELDS = ["Tamanho", "Cor"]
+
 function VariantSelector({ product }: Props) {
   const { url, isVariantOf } = product;
   const hasVariant = isVariantOf?.hasVariant ?? [];
@@ -14,8 +16,11 @@ function VariantSelector({ product }: Props) {
 
   return (
     <ul class="flex flex-col gap-4">
-      {Object.keys(possibilities).map((name) => (
-        <li class="flex flex-col gap-2">
+      {Object.keys(possibilities).map((name) => {
+
+        if(!SHOW_FIELDS.includes(name)) return null;
+
+        return (<li class="flex flex-col gap-2">
           <span class="text-sm">{name}</span>
           <ul class="flex flex-row gap-3">
             {Object.entries(possibilities[name]).map(([value, link]) => {
@@ -37,8 +42,8 @@ function VariantSelector({ product }: Props) {
               );
             })}
           </ul>
-        </li>
-      ))}
+        </li>)
+      })}
     </ul>
   );
 }
