@@ -16,8 +16,6 @@ function Cart() {
   const coupon = cart.value?.orderForm?.coupon_code ?? undefined;
   const token = cart.value?.orderForm?.token;
 
-  console.log(items);
-
   return (
     <BaseCart
       items={items.map((item) => ({
