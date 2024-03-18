@@ -47,7 +47,6 @@ import * as $$$$$$35 from "./sections/Miscellaneous/CampaignTimer.tsx";
 import * as $$$$$$36 from "./sections/Miscellaneous/CookieConsent.tsx";
 import * as $$$$$$37 from "./sections/Miscellaneous/Slide.tsx";
 import * as $$$$$$38 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$39 from "./sections/Product/BuyTogether.tsx";
 import * as $$$$$$40 from "./sections/Product/ImageGalleryFrontBack.tsx";
 import * as $$$$$$41 from "./sections/Product/ImageGallerySlider.tsx";
 import * as $$$$$$42 from "./sections/Product/NotFound.tsx";
@@ -109,7 +108,6 @@ const manifest = {
     "deco-sites/bianza/sections/Miscellaneous/CookieConsent.tsx": $$$$$$36,
     "deco-sites/bianza/sections/Miscellaneous/Slide.tsx": $$$$$$37,
     "deco-sites/bianza/sections/Newsletter/Newsletter.tsx": $$$$$$38,
-    "deco-sites/bianza/sections/Product/BuyTogether.tsx": $$$$$$39,
     "deco-sites/bianza/sections/Product/ImageGalleryFrontBack.tsx": $$$$$$40,
     "deco-sites/bianza/sections/Product/ImageGallerySlider.tsx": $$$$$$41,
     "deco-sites/bianza/sections/Product/NotFound.tsx": $$$$$$42,
