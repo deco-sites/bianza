@@ -17,6 +17,9 @@ const colors: Record<string, string> = {
   "verde-clara": "bg-[#90EE90] ring-[#90EE90]",
   "vermelho": "bg-[#FF0000] ring-[#FF0000]",
   "amarelo": "bg-[#ffff00] ring-[#ffff00]",
+  "terra": "bg-[#e2725b] ring-[#ffff00]",
+  "roxa": "bg-[#993399] ring-[#ffff00]",
+  
 
   // Color variants - only applied when no color as content is passed
   "active": "text-base-content ring-1 ring-black rounded-full",

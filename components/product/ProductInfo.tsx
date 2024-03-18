@@ -86,7 +86,7 @@ function ProductInfo({ page, layout }: Props) {
           </span>
         </h1>
         <div>
-          {gtin && <span class="text-sm text-base-300">SKU: {gtin}</span>}
+          {gtin && <span class="text-[12px] text-base-300">SKU: {gtin}</span>}
         </div>
       </div>
 
@@ -116,13 +116,13 @@ function ProductInfo({ page, layout }: Props) {
               {formatPrice(price, offers?.priceCurrency)}
             </span>
           )}
-          <span class="font-medium text-xl text-secondary">
-            Por: &nbsp;
+          <span class="text-[16px] text-xl text-[#333]">
+             &nbsp;
             {formatPrice(salePrice, offers?.priceCurrency)}
           </span>
         </div>
-        ou: &nbsp;
-        <span class="text-sm text-base-300">{installments}</span>
+        ou &nbsp;
+        <span class="text-[13px] text-base-300">{installments}</span>
       </div>
 
       {/* Sku Selector */}
@@ -174,6 +174,7 @@ function ProductInfo({ page, layout }: Props) {
                   productID={productID}
                   additionalProperty={additionalProperty}
                 />
+                
               )}
               {platform === "shopify" && (
                 <AddToCartButtonShopify
