@@ -318,7 +318,7 @@ function ProductCard({
                   </div>
                 )}
 
-                <div class="text-base-content lg:text-sm font-light mt-[-3px]">
+                <div class="text-[12px lg:text-sm font-light mt-[-3px] text-[#808080d1]">
                   {formatPrice(salePrice, offers?.priceCurrency)}
                 </div>
               </div>
