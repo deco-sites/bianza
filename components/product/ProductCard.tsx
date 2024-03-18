@@ -237,7 +237,7 @@ function ProductCard({
         >
           {/* SKU Selector */}
           {l?.onMouseOver?.showSkuSelector && (
-            <ul class="flex justify-center items-center gap-2 w-full bg-black text-white">
+            <ul class="flex justify-center items-center gap-2 w-full bg-[#413f3f4a] text-white">
               {skuSelector}
             </ul>
           )}
