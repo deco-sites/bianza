@@ -13,7 +13,7 @@ export interface Props {
 export default function BuyTogether({ products }: SectionProps<typeof loader>) {
   return (
     <>
-      <h1>Buy Together</h1>
+      <h1 class="font-bold text-base-content text-[40px] leading-[120%]">Compre Junto</h1>
       <div class="flex">
         {products?.map((product) => {
           return <ProductCard product={product} />;
