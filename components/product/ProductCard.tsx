@@ -104,7 +104,7 @@ function ProductCard({
     <a
       href={url && relative(url)}
       aria-label="view product"
-      class="btn btn-block"
+      class="btn btn-block bg-black text-white hover:bg-black"
     >
       {l?.basics?.ctaText || "Ver produto"}
     </a>
@@ -115,7 +115,7 @@ function ProductCard({
       id={id}
       class={`card card-compact group w-full ${
         align === "center" ? "text-center" : "text-start"
-      } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-bordered" : ""}
+      } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-border-none" : ""}
         ${
         l?.onMouseOver?.card === "Move up" &&
         "duration-500 transition-translate ease-in-out lg:hover:-translate-y-2"
@@ -162,6 +162,12 @@ function ProductCard({
             }`}
           >
             {platform === "vtex" && (
+              <WishlistButtonVtex
+                productGroupID={productGroupID}
+                productID={productID}
+              />
+            )}
+            {platform === "vnda" && (
               <WishlistButtonVtex
                 productGroupID={productGroupID}
                 productID={productID}
@@ -214,7 +220,7 @@ function ProductCard({
               alt={back?.alternateName ?? front.alternateName}
               width={WIDTH}
               height={HEIGHT}
-              class="bg-base-100 col-span-full row-span-full transition-opacity rounded w-full opacity-0 lg:group-hover:opacity-100"
+              class="bg-base-100 col-span-full row-span-full transition-opacity w-full opacity-0 lg:group-hover:opacity-100"
               sizes="(max-width: 640px) 50vw, 20vw"
               loading="lazy"
               decoding="async"
@@ -231,7 +237,7 @@ function ProductCard({
         >
           {/* SKU Selector */}
           {l?.onMouseOver?.showSkuSelector && (
-            <ul class="flex justify-center items-center gap-2 w-full ">
+            <ul class="flex justify-center items-center gap-2 w-full bg-[#413f3f4a] text-white h-11">
               {skuSelector}
             </ul>
           )}
@@ -312,7 +318,7 @@ function ProductCard({
                   </div>
                 )}
 
-                <div class="text-base-content lg:text-sm font-light mt-[-3px]">
+                <div class="text-[12px lg:text-sm font-light mt-[-3px] text-[#808080d1]">
                   {formatPrice(salePrice, offers?.priceCurrency)}
                 </div>
               </div>
