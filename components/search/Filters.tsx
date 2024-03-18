@@ -21,7 +21,7 @@ function ValueItem(
   return (
     <a href={url} rel="nofollow" class="flex items-center gap-2">
       <div aria-checked={selected} class="checkbox" />
-      <span class="text-sm">{label}</span>
+      <span class="text-[0.8rem]">{label}</span>
       {quantity > 0 && <span class="text-sm text-base-300">({quantity})</span>}
     </a>
   );
@@ -33,7 +33,7 @@ function FilterValues({ label, values }: FilterToggle) {
     : "flex-col";
 
   return (
-    <ul class={`flex flex-wrap gap-2 ${flexDirection}`}>
+    <ul class={`flex flex-wrap gap-4 ${flexDirection}`}>
       {values.map((item) => {
         const { url, selected, value, quantity } = item;
         if (label === "cor" || label === "tamanho") {
@@ -71,7 +71,7 @@ function Filters({ filters }: Props) {
         .filter(isToggle)
         .map((filter) => (
           <li class="flex flex-col gap-4">
-            <span>{filter.label}</span>
+            <span class="uppercase font-semibold">{filter.label}</span>
             <FilterValues {...filter} />
           </li>
         ))}
