@@ -167,6 +167,12 @@ function ProductCard({
                 productID={productID}
               />
             )}
+            {platform === "vnda" && (
+              <WishlistButtonVtex
+                productGroupID={productGroupID}
+                productID={productID}
+              />
+            )}
             {platform === "wake" && (
               <WishlistButtonWake
                 productGroupID={productGroupID}
@@ -214,7 +220,7 @@ function ProductCard({
               alt={back?.alternateName ?? front.alternateName}
               width={WIDTH}
               height={HEIGHT}
-              class="bg-base-100 col-span-full row-span-full transition-opacity rounded w-full opacity-0 lg:group-hover:opacity-100"
+              class="bg-base-100 col-span-full row-span-full transition-opacity w-full opacity-0 lg:group-hover:opacity-100"
               sizes="(max-width: 640px) 50vw, 20vw"
               loading="lazy"
               decoding="async"
@@ -231,7 +237,7 @@ function ProductCard({
         >
           {/* SKU Selector */}
           {l?.onMouseOver?.showSkuSelector && (
-            <ul class="flex justify-center items-center gap-2 w-full ">
+            <ul class="flex justify-center items-center gap-2 w-full bg-black text-white">
               {skuSelector}
             </ul>
           )}
