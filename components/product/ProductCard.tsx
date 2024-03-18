@@ -104,7 +104,7 @@ function ProductCard({
     <a
       href={url && relative(url)}
       aria-label="view product"
-      class="btn btn-block bg-black text-white"
+      class="btn btn-block bg-black text-white hover:bg-black"
     >
       {l?.basics?.ctaText || "Ver produto"}
     </a>
@@ -115,7 +115,7 @@ function ProductCard({
       id={id}
       class={`card card-compact group w-full ${
         align === "center" ? "text-center" : "text-start"
-      } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-bordered" : ""}
+      } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-border-none" : ""}
         ${
         l?.onMouseOver?.card === "Move up" &&
         "duration-500 transition-translate ease-in-out lg:hover:-translate-y-2"
@@ -237,7 +237,7 @@ function ProductCard({
         >
           {/* SKU Selector */}
           {l?.onMouseOver?.showSkuSelector && (
-            <ul class="flex justify-center items-center gap-2 w-full bg-[#413f3f4a] text-white">
+            <ul class="flex justify-center items-center gap-2 w-full bg-[#413f3f4a] text-white h-11">
               {skuSelector}
             </ul>
           )}
