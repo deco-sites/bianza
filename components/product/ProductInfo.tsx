@@ -117,7 +117,7 @@ function ProductInfo({ page, layout }: Props) {
             </span>
           )}
           <span class="text-[16px] text-xl text-[#333]">
-             &nbsp;
+            &nbsp;
             {formatPrice(salePrice, offers?.priceCurrency)}
           </span>
         </div>
@@ -174,7 +174,6 @@ function ProductInfo({ page, layout }: Props) {
                   productID={productID}
                   additionalProperty={additionalProperty}
                 />
-                
               )}
               {platform === "shopify" && (
                 <AddToCartButtonShopify
