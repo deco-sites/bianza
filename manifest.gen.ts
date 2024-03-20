@@ -60,6 +60,10 @@ import * as $$$$$$48 from "./sections/Product/Wishlist.tsx";
 import * as $$$$$$49 from "./sections/Social/InstagramPosts.tsx";
 import * as $$$$$$50 from "./sections/Social/WhatsApp.tsx";
 import * as $$$$$$51 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$52 from "./sections/Product/BuyTogether.tsx";
+
+
+
 
 const manifest = {
   "loaders": {
@@ -121,6 +125,8 @@ const manifest = {
     "deco-sites/bianza/sections/Social/InstagramPosts.tsx": $$$$$$49,
     "deco-sites/bianza/sections/Social/WhatsApp.tsx": $$$$$$50,
     "deco-sites/bianza/sections/Theme/Theme.tsx": $$$$$$51,
+    "deco-sites/bianza/sections/Product/BuyTogether.tsx": $$$$$$52,
+    
   },
   "apps": {
     "deco-sites/bianza/apps/decohub.ts": $$$$$$$$$$$0,
